@@ -1,29 +1,9 @@
 import { motion } from 'framer-motion'
+import { useCopy } from '../../i18n/LanguageContext'
 
 export default function StorySection() {
-  const chapters = [
-    {
-      num: '01',
-      title: 'The world drowns in mediocre digital products.',
-      p1: 'Look at the tools you use every day. Most are clunky, slow, or just plain boring. The baseline for digital experiences has settled somewhere between "barely functional" and "forgettable."',
-      p2: 'Companies bleed revenue not because their idea is flawed, but because their execution lacks soul. In a sea of templates, average is the most dangerous place a brand can be.',
-      align: 'left'
-    },
-    {
-      num: '02',
-      title: 'We believe every company deserves a world-class digital presence.',
-      p1: 'Your product is your absolute best salesperson. It doesn\'t sleep, it doesn\'t take days off. It should feel intuitive, look striking, and function flawlessly.',
-      p2: 'We reject the compromise between aesthetic beauty and technical performance. The best digital products do both beautifully.',
-      align: 'right'
-    },
-    {
-      num: '03',
-      title: 'So we built a studio that does it differently.',
-      p1: 'No fluff. No bloated agency retainers. Just a ruthless focus on building what matters with the best craft possible.',
-      p2: 'From deep strategic foundations to pixel-perfect execution, our process is designed to push your brand from where it is to where it simply must be.',
-      align: 'center'
-    }
-  ]
+  const story = useCopy().story
+  const chapters = story.chapters
 
   const Art01 = () => (
     <div className="relative w-full aspect-square md:aspect-[4/3] flex items-center justify-center pointer-events-none">
@@ -59,7 +39,7 @@ export default function StorySection() {
               
               {/* Text Side */}
               <div className={`relative z-10 ${chapter.align === 'right' ? 'md:col-start-2 md:row-start-1' : ''}`}>
-                <div className="absolute -top-16 md:-top-32 -left-8 md:-left-16 font-display text-[15rem] md:text-[20rem] text-white/[0.02] leading-none select-none pointer-events-none font-bold">
+                <div className="absolute -top-16 md:-top-32 -left-4 md:-left-16 font-display text-[8rem] md:text-[20rem] text-white/[0.02] leading-none select-none pointer-events-none font-bold">
                   {chapter.num}
                 </div>
                 
@@ -72,13 +52,6 @@ export default function StorySection() {
                   <p>{chapter.p2}</p>
                 </div>
 
-                {chapter.align === 'center' && (
-                  <div className="mt-12">
-                    <a href="#team" className="inline-flex items-center gap-2 font-mono text-sm uppercase tracking-widest text-signal hover:text-white transition-colors" data-cursor="hover">
-                      Meet the team →
-                    </a>
-                  </div>
-                )}
               </div>
 
               {/* Visual Side */}
@@ -94,7 +67,7 @@ export default function StorySection() {
             {i < chapters.length - 1 && (
               <div className="my-24 md:my-48 relative flex justify-center items-center">
                 <hr className="w-full border-white/5 absolute" />
-                <span className="bg-ink-950 px-4 font-mono text-xs text-white/20 relative">Chapter {chapters[i+1].num}</span>
+                <span className="bg-ink-950 px-4 font-mono text-xs text-white/20 relative">{story.chapter} {chapters[i + 1].num}</span>
               </div>
             )}
           </div>

@@ -2,6 +2,7 @@ import { motion, useMotionValue, useSpring } from 'framer-motion'
 import { useState, useEffect } from 'react'
 
 export default function CustomCursor() {
+  const [enabled, setEnabled] = useState(false)
   const [cursorState, setCursorState] = useState('default') // 'default'|'hover'|'text'|'view'
   
   const mouseX = useMotionValue(-100)
@@ -16,20 +17,30 @@ export default function CustomCursor() {
   const springY = useSpring(mouseY, { stiffness: 500, damping: 40 })
 
   useEffect(() => {
+    const media = window.matchMedia('(hover: hover) and (pointer: fine) and (min-width: 768px)')
+    const sync = () => setEnabled(media.matches)
+    sync()
+    media.addEventListener('change', sync)
+    return () => media.removeEventListener('change', sync)
+  }, [])
+
+  useEffect(() => {
+    if (!enabled) return
     const onMouseMove = (e) => {
       mouseX.set(e.clientX)
       mouseY.set(e.clientY)
     }
     window.addEventListener('mousemove', onMouseMove)
     return () => window.removeEventListener('mousemove', onMouseMove)
-  }, [mouseX, mouseY])
+  }, [enabled, mouseX, mouseY])
 
   useEffect(() => {
+    if (!enabled) return
     const handleMouseOver = (e) => {
       const el = e.target.closest('[data-cursor]')
-      if (el) {
-        setCursorState(el.getAttribute('data-cursor'))
-      }
+      const next = el?.getAttribute('data-cursor')
+      if (next === 'hover' || next === 'view') setCursorState(next)
+      else setCursorState('default')
     }
     const handleMouseOut = (e) => {
       // Only reset if we are not moving into another data-cursor element
@@ -46,7 +57,9 @@ export default function CustomCursor() {
       document.removeEventListener('mouseover', handleMouseOver)
       document.removeEventListener('mouseout', handleMouseOut)
     }
-  }, [])
+  }, [enabled])
+
+  if (!enabled) return null
 
   // Variants for the inner tracker (usually text or specific shape)
   const variants = {
@@ -65,15 +78,6 @@ export default function CustomCursor() {
       x: "-50%",
       y: "-50%",
       borderRadius: "50%",
-      backgroundColor: "#ffffff",
-      opacity: 1
-    },
-    text: {
-      width: 4,
-      height: 24,
-      x: "-2px",
-      y: "-12px",
-      borderRadius: "2px",
       backgroundColor: "#ffffff",
       opacity: 1
     },
@@ -99,7 +103,6 @@ export default function CustomCursor() {
       backgroundColor: "transparent"
     },
     hover: { opacity: 0 },
-    text: { opacity: 0 },
     view: { opacity: 0 }
   }
 
@@ -114,12 +117,9 @@ export default function CustomCursor() {
           mixBlendMode: 'difference'
         }}
         variants={variants}
-        animate={cursorState}
+        animate={cursorState === 'view' ? 'view' : cursorState === 'hover' ? 'hover' : 'default'}
         transition={{ type: "spring", stiffness: 400, damping: 28 }}
-      >
-        {cursorState === 'hover' && "CLICK"}
-        {cursorState === 'view' && "VIEW"}
-      </motion.div>
+      />
 
       <motion.div
         className="fixed top-0 left-0 z-[9998] pointer-events-none rounded-full flex justify-center items-center"

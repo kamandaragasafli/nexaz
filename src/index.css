@@ -8,8 +8,25 @@
     --cursor-y: 0px;
   }
 
-  * {
-    cursor: none !important;
+  @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
+    *,
+    *::before,
+    *::after {
+      cursor: none !important;
+      caret-color: transparent;
+    }
+  }
+
+  button,
+  a,
+  p,
+  span,
+  h1,
+  h2,
+  h3,
+  h4,
+  li {
+    user-select: none;
   }
 
   html {

@@ -2,8 +2,10 @@ import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import ScrollReveal from '../ui/ScrollReveal'
+import { useCopy } from '../../i18n/LanguageContext'
 
 export default function ProcessTimeline() {
+  const copy = useCopy().process
   const containerRef = useRef(null)
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -13,14 +15,7 @@ export default function ProcessTimeline() {
   // We draw the vertical line from top to bottom
   const scaleY = useTransform(scrollYProgress, [0, 1], [0, 1])
 
-  const steps = [
-    { title: "Discovery Call", tagline: "15 minutes that change everything", desc: "A brief alignment on your goals, timeline, constraints, and budget. No pressure, just clarity.", duration: "Day 0" },
-    { title: "Deep Dive Workshop", tagline: "We become obsessed with your problem", desc: "We map user journeys, run competitive analysis, and unearth the technical constraints before writing a single line of code.", duration: "Week 1" },
-    { title: "Strategy Blueprint", tagline: "Your roadmap to digital dominance", desc: "We deliver a comprehensive architecture, proposed design system foundations, and technical stack choices.", duration: "Week 2" },
-    { title: "Design Sprints", tagline: "Pixels become possibilities", desc: "Weekly agile sprints. You get access to live Figma files and daily async updates. Feedback loops are tight and fast.", duration: "Weeks 3-5" },
-    { title: "Build & Iterate", tagline: "We ship. You approve. We refine.", desc: "Engineering happens transparently. We push to staging environments continuously so you can test as we build.", duration: "Weeks 4-7" },
-    { title: "Launch & Grow", tagline: "The beginning, not the end", desc: "Go-live is orchestrated meticulously. We set up analytics, monitor performance, and hand over the keys (or stay on for support).", duration: "Week 8+" }
-  ]
+  const steps = copy.steps
 
   const StepItem = ({ step, index }) => {
     const { ref, inView } = useInView({ threshold: 0.5 })
@@ -36,7 +31,7 @@ export default function ProcessTimeline() {
               backgroundColor: inView ? '#e8ff47' : '#080812'
             }}
           />
-          <span className="absolute left-8 font-mono text-xs opacity-0 group-hover:opacity-100 transition-opacity text-mist-900">Scroll</span>
+          <span className="absolute left-8 font-mono text-xs opacity-0 group-hover:opacity-100 transition-opacity text-mist-900">{copy.scroll}</span>
         </div>
 
         <motion.div
@@ -52,9 +47,6 @@ export default function ProcessTimeline() {
           </div>
 
           <div className="relative z-10">
-            <span className="inline-block border border-white/10 text-mist-900 bg-ink-950 font-mono text-xs px-3 py-1 rounded-full mb-6">
-              {step.duration}
-            </span>
             <h3 className={`font-display text-4xl md:text-5xl lg:text-6xl font-semibold mb-4 tracking-tight transition-colors duration-500 ${inView ? 'text-white' : 'text-mist-500'}`}>
               {step.title}
             </h3>
@@ -74,8 +66,8 @@ export default function ProcessTimeline() {
     <section ref={containerRef} className="bg-ink-900 relative" id="process">
       <div className="max-w-7xl mx-auto px-6 md:px-12 pt-32 pb-16">
         <ScrollReveal>
-          <p className="font-mono text-xs text-signal uppercase tracking-widest mb-4">Process</p>
-          <h2 className="font-display text-5xl md:text-7xl font-bold tracking-tight">How we get there.</h2>
+          <p className="font-mono text-xs text-signal uppercase tracking-widest mb-4">{copy.eyebrow}</p>
+          <h2 className="font-display text-5xl md:text-7xl font-bold tracking-tight">{copy.title}</h2>
         </ScrollReveal>
       </div>
 

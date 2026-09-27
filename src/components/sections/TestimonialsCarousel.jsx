@@ -2,15 +2,10 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronRight, ChevronLeft } from 'lucide-react'
 import MagneticButton from '../ui/MagneticButton'
+import { useCopy } from '../../i18n/LanguageContext'
 
 export default function TestimonialsCarousel() {
-  const testimonials = [
-    { quote: "NEXUS transformed our entire digital presence. We went from embarrassed to proud in 12 weeks.", author: "CEO", company: "Vanta Finance" },
-    { quote: "The strategy session alone was worth the entire engagement cost.", author: "Founder", company: "Bloom Health" },
-    { quote: "They think like founders, not vendors. Rare.", author: "CTO", company: "Orbit SaaS" },
-    { quote: "Delivered 3 weeks early. Never happens with agencies.", author: "Product Lead", company: "Crest Retail" },
-    { quote: "Our Clutch review says 5 stars. Honestly, we'd give 6.", author: "CMO", company: "Frameshift" }
-  ]
+  const testimonials = useCopy().testimonials
 
   const [currentIndex, setCurrentIndex] = useState(0)
 
@@ -33,7 +28,7 @@ export default function TestimonialsCarousel() {
           "
         </div>
 
-        <div className="relative z-10 w-full md:w-4/5 mx-auto text-center" data-cursor="text">
+        <div className="relative z-10 w-full md:w-4/5 mx-auto text-center">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
@@ -43,18 +38,9 @@ export default function TestimonialsCarousel() {
               transition={{ duration: 0.5 }}
               className="flex flex-col items-center"
             >
-              <h3 className="font-display text-3xl md:text-5xl lg:text-6xl leading-tight mb-12">
+              <h3 className="font-display text-3xl md:text-5xl lg:text-6xl leading-tight">
                 {testimonials[currentIndex].quote}
               </h3>
-              
-              <div>
-                <p className="font-mono text-signal uppercase tracking-widest text-sm mb-1">
-                  {testimonials[currentIndex].author}
-                </p>
-                <p className="font-body text-mist-700">
-                  {testimonials[currentIndex].company}
-                </p>
-              </div>
             </motion.div>
           </AnimatePresence>
         </div>

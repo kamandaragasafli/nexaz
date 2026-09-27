@@ -16,13 +16,6 @@ export const caseStudies = [
   { id: 4, company: 'Crest Retail', industry: 'E-commerce', result: '₹2.4Cr / 90 days', desc: 'Shopify rebuild with conversion-first design. Revenue target hit in under 3 months.', services: ['Shopify', 'Growth', 'SEO'], accentColor: 'from-purple-900/40 to-transparent' },
 ]
 
-export const team = [
-  { name: 'Ritik Singh', role: 'Founder & Strategy', quote: 'Good strategy is just clear thinking made visible.', colors: ['#e8ff47', '#080812'] },
-  { name: 'Deepak Kanojiya', role: 'Creative Director', quote: 'Design that doesn\'t solve a problem is just decoration.', colors: ['#ff6b35', '#080812'] },
-  { name: 'Mayank Somvanshi', role: 'Lead Engineer', quote: 'Code is poetry. Ship it like it is.', colors: ['#a78bfa', '#080812'] },
-  { name: 'Nand Kishore Soni', role: 'Growth & Marketing', quote: 'Growth is a system, not a hack.', colors: ['#34d399', '#080812'] },
-]
-
 export const faqs = [
   { q: 'How long does a typical project take?', a: 'Most projects take 3–8 weeks depending on scope. We\'ll give you a precise timeline in our discovery call. We don\'t pad timelines — we hit them.' },
   { q: 'Do you work with international clients?', a: 'Yes. About 30% of our clients are outside India. We work async-first with tools like Linear, Figma, and Loom — timezone is rarely a barrier.' },

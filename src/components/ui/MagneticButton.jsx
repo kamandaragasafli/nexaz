@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { motion, useMotionValue, useSpring } from 'framer-motion'
 
-export default function MagneticButton({ children, className, ...props }) {
+export default function MagneticButton({ children, className, href, ...props }) {
   const ref = useRef(null)
   const x = useMotionValue(0)
   const y = useMotionValue(0)
@@ -18,16 +18,20 @@ export default function MagneticButton({ children, className, ...props }) {
     y.set((e.clientY - centerY) * 0.35)
   }
 
+  const Tag = href ? motion.a : motion.button
+
   return (
-    <motion.button
+    <Tag
       ref={ref}
+      href={href}
+      type={href ? undefined : 'button'}
       style={{ x: springX, y: springY }}
       onMouseMove={handleMouseMove}
       onMouseLeave={() => { x.set(0); y.set(0) }}
-      className={className}
+      className={`inline-flex items-center justify-center text-center ${className || ''}`}
       {...props}
     >
       {children}
-    </motion.button>
+    </Tag>
   )
 }

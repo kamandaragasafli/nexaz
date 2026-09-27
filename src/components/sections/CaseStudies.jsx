@@ -2,8 +2,9 @@ import { useRef } from 'react'
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
 import { caseStudies } from '../../data/content'
 import ScrollReveal from '../ui/ScrollReveal'
+import { useCopy } from '../../i18n/LanguageContext'
 
-const CaseStudyCard = ({ data }) => {
+const CaseStudyCard = ({ data, text, viewLabel }) => {
   const cardRef = useRef(null)
   const x = useMotionValue(0)
   const y = useMotionValue(0)
@@ -53,23 +54,23 @@ const CaseStudyCard = ({ data }) => {
         <div className="absolute inset-0 p-8 flex flex-col justify-between z-10">
           <div className="flex justify-between items-start">
             <span className="inline-block border border-white/20 text-white/60 bg-black/20 font-mono text-xs px-3 py-1 rounded-full backdrop-blur-md">
-              {data.industry}
+              {text.industry}
             </span>
           </div>
           <div>
             <h3 className="font-display font-medium text-4xl mb-2 tracking-tight" style={{ transform: "translateZ(30px)" }}>{data.company}</h3>
-            <p className="font-mono text-xl text-signal" style={{ transform: "translateZ(20px)" }}>{data.result}</p>
+            <p className="font-mono text-xl text-signal" style={{ transform: "translateZ(20px)" }}>{text.result}</p>
           </div>
         </div>
 
         {/* Hover Overlay State */}
         <div className="absolute inset-0 bg-ink-950/95 p-8 flex flex-col justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out z-20">
           <p className="text-mist-100 text-lg leading-relaxed mb-6 font-body">
-            {data.desc}
+            {text.desc}
           </p>
           
           <div className="flex flex-wrap gap-2 mb-8">
-            {data.services.map(tag => (
+            {text.services.map(tag => (
               <span key={tag} className="font-mono text-[10px] text-white/50 bg-white/5 px-2 py-1 rounded-sm border border-white/10">
                 {tag}
               </span>
@@ -77,7 +78,7 @@ const CaseStudyCard = ({ data }) => {
           </div>
 
           <div className="mt-auto flex items-center gap-2 text-signal font-mono text-sm group/btn cursor-pointer">
-            <span className="group-hover/btn:underline hover:underline-offset-4">View Case Study</span> &rarr;
+            <span className="group-hover/btn:underline hover:underline-offset-4">{viewLabel}</span> &rarr;
           </div>
         </div>
       </motion.div>
@@ -86,23 +87,24 @@ const CaseStudyCard = ({ data }) => {
 }
 
 export default function CaseStudies() {
+  const copy = useCopy().work
   return (
     <section className="bg-ink-950 py-32" id="work">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal className="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
           <div>
-            <p className="font-mono text-xs text-signal uppercase tracking-widest mb-4">Selected Work</p>
-            <h2 className="font-display text-5xl md:text-7xl font-bold tracking-tight">Proof in production.</h2>
+            <p className="font-mono text-xs text-signal uppercase tracking-widest mb-4">{copy.eyebrow}</p>
+            <h2 className="font-display text-5xl md:text-7xl font-bold tracking-tight">{copy.title}</h2>
           </div>
           <button className="text-mist-900 border border-white/10 hover:border-white/30 hover:text-white px-6 py-3 rounded-full text-sm transition-colors text-nowrap self-start md:self-auto" data-cursor="hover">
-            View All Projects
+            {copy.all}
           </button>
         </ScrollReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
           {caseStudies.map((cs, i) => (
             <ScrollReveal key={cs.id} delay={i * 0.1}>
-              <CaseStudyCard data={cs} />
+              <CaseStudyCard data={cs} text={copy.items[i]} viewLabel={copy.view} />
             </ScrollReveal>
           ))}
         </div>

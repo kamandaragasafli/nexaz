@@ -1,6 +1,8 @@
 import MarqueeText from '../ui/MarqueeText'
+import { useCopy } from '../../i18n/LanguageContext'
 
 export default function LogoCloud() {
+  const label = useCopy().logo
   const companies1 = [
     'Vercel', 'Stripe', 'Linear', 'Notion', 'Figma', 
     'Shopify', 'Loom', 'Arc', 'Raycast', 'Pitch'
@@ -20,7 +22,7 @@ export default function LogoCloud() {
     <section className="bg-ink-900 py-24 pb-32 border-b border-white/5 relative overflow-hidden group">
       <div className="max-w-7xl mx-auto px-6 mb-16 relative z-10">
         <p className="text-center font-mono text-xs text-mist-900 uppercase tracking-widest">
-          Trusted by forward-thinking companies
+          {label}
         </p>
       </div>
       

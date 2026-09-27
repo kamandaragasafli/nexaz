@@ -2,10 +2,11 @@ import * as Accordion from '@radix-ui/react-accordion'
 import { Plus, Minus } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
-import { faqs } from '../../data/content'
 import ScrollReveal from '../ui/ScrollReveal'
+import { useCopy } from '../../i18n/LanguageContext'
 
 export default function FAQSection() {
+  const copy = useCopy().faq
   const [value, setValue] = useState('')
 
   return (
@@ -15,14 +16,14 @@ export default function FAQSection() {
           
           <ScrollReveal>
             <div className="sticky top-32">
-              <h2 className="font-display text-[8rem] md:text-[10rem] text-white/5 leading-none font-bold select-none pointer-events-none mb-4 -ml-4 tracking-tighter">
-                FAQ
+              <h2 className="font-display text-7xl sm:text-[8rem] md:text-[10rem] text-white/5 leading-none font-bold select-none pointer-events-none mb-4 tracking-tighter overflow-hidden">
+                {copy.watermark}
               </h2>
               <div className="relative -mt-16 md:-mt-20 ml-2">
-                <p className="font-mono text-xs text-signal uppercase tracking-widest mb-4">The details</p>
-                <h3 className="font-display text-4xl md:text-5xl font-bold mb-6">Answers to your questions.</h3>
+                <p className="font-mono text-xs text-signal uppercase tracking-widest mb-4">{copy.eyebrow}</p>
+                <h3 className="font-display text-4xl md:text-5xl font-bold mb-6">{copy.title}</h3>
                 <p className="text-mist-900 font-body text-lg leading-relaxed max-w-sm">
-                  Everything you need to know about how we work, what we charge, and what happens when things go wrong.
+                  {copy.body}
                 </p>
               </div>
             </div>
@@ -36,7 +37,7 @@ export default function FAQSection() {
               value={value}
               onValueChange={setValue}
             >
-              {faqs.map((faq, index) => (
+              {copy.items.map((faq, index) => (
                 <Accordion.Item 
                   key={index} 
                   value={`item-${index}`}
