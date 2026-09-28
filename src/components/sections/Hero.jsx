@@ -96,7 +96,7 @@ export default function Hero() {
           transition={{ delay: 1.4, duration: 0.8 }}
           className="flex flex-wrap items-center gap-6"
         >
-          <MagneticButton className="bg-signal text-ink-950 font-display font-medium px-8 py-4 rounded-full text-lg hover:shadow-[0_0_30px_rgba(232,255,71,0.3)] transition-all">
+          <MagneticButton className="bg-signal text-ink-950 font-display font-medium px-8 py-4 rounded-full text-lg hover:shadow-[0_0_30px_rgba(43,255,90,0.3)] transition-all">
             {t.work}
           </MagneticButton>
           <button className="border border-white/20 text-mist-900 hover:text-white hover:border-white/40 hover:bg-white/5 font-display font-medium px-8 py-4 rounded-full text-lg transition-all" data-cursor="hover">

@@ -93,7 +93,7 @@ export const messages = {
       all: 'View All Projects',
       view: 'View Case Study',
       items: [
-        { industry: 'FinTech', result: '3.2× Conversion', desc: 'Redesigned their onboarding flow from 14 steps to 3. Conversion tripled in 6 weeks.', services: ['Strategy', 'Design', 'React'] },
+        { industry: '', result: '', desc: '', services: [], order: 'Order', modules: ['Dashboard', 'Calendar', 'Notifications', 'Contracts', 'Gmail', 'Catalog', 'Procurement', 'Import', 'CRM', 'Logistics', 'Sales', 'Warehouse', 'Accounting', 'Tax', 'HR', 'Reports'] },
         { industry: 'HealthTech', result: '$4M Series A', desc: 'Built the investor-facing brand and product demo that closed their seed round.', services: ['Branding', 'Web', 'Pitch Deck'] },
         { industry: 'B2B SaaS', result: 'NPS 34 → 71', desc: 'Redesigned the core dashboard with AI-assisted insights. Users finally understood their data.', services: ['AI', 'Design', 'React'] },
         { industry: 'E-commerce', result: '₹2.4Cr / 90 days', desc: 'Shopify rebuild with conversion-first design. Revenue target hit in under 3 months.', services: ['Shopify', 'Growth', 'SEO'] },
@@ -262,7 +262,7 @@ export const messages = {
       all: 'Bütün layihələr',
       view: 'Keysə bax',
       items: [
-        { industry: 'Fintex', result: '3.2× çevrilmə', desc: 'Qeydiyyat axınını 14 addımdan 3-ə endirdik. Çevrilmə 6 həftəyə üçqat artdı.', services: ['Strategiya', 'Dizayn', 'React'] },
+        { industry: '', result: '', desc: '', services: [], order: 'Sifariş et', modules: ['İdarə paneli', 'Təqvim', 'Bildirişlər', 'Müqavilələr', 'Gmail', 'Kataloq', 'Satınalma', 'İdxal', 'CRM', 'Logistika', 'Satış', 'Anbar', 'Mühasibatlıq', 'Vergi', 'İR', 'Hesabatlar'] },
         { industry: 'Səhiyyə texnologiyası', result: '4 mln $ A seriyası', desc: 'İnvestor brendini və toxum raundunu bağlayan məhsul demosunu qurduq.', services: ['Brendinq', 'Veb', 'Təqdimat'] },
         { industry: 'B2B SaaS', result: 'NPS 34 → 71', desc: 'Əsas paneli süni intellektlə yenidən qurduq. İstifadəçilər nəhayət datanı anladılar.', services: ['Süni intellekt', 'Dizayn', 'React'] },
         { industry: 'E-ticarət', result: '₹2.4 kr / 90 gün', desc: 'Çevrilməyə yönəlmiş Shopify yenidənqurması. Gəlir hədəfi 3 aydan az müddətdə tutuldu.', services: ['Shopify', 'İnkişaf', 'SEO'] },

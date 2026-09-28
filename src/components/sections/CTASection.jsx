@@ -12,7 +12,7 @@ export default function CTASection() {
       <div className="grain absolute inset-0 z-0 mix-blend-overlay opacity-30"></div>
       
       {/* Spotlight */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] max-w-[800px] max-h-[800px] bg-[radial-gradient(ellipse_80%_50%_at_50%_50%,rgba(232,255,71,0.06),transparent)] z-0 rounded-full blur-[50px] pointer-events-none"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] max-w-[800px] max-h-[800px] bg-[radial-gradient(ellipse_80%_50%_at_50%_50%,rgba(43,255,90,0.06),transparent)] z-0 rounded-full blur-[50px] pointer-events-none"></div>
 
       {/* Very large slow floating shapes */}
       <motion.div 
@@ -66,7 +66,7 @@ export default function CTASection() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="flex flex-col items-center gap-6 w-full"
         >
-          <MagneticButton href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="px-12 py-6 text-xl md:text-2xl font-display font-medium bg-signal text-ink-950 rounded-full hover:shadow-[0_0_40px_rgba(232,255,71,0.3)] transition-all group overflow-hidden relative">
+          <MagneticButton href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="px-12 py-6 text-xl md:text-2xl font-display font-medium bg-signal text-ink-950 rounded-full hover:shadow-[0_0_40px_rgba(43,255,90,0.3)] transition-all group overflow-hidden relative">
             <span className="relative z-10 flex items-center gap-3">
               {t.button}
               <motion.span animate={{ x: [0, 5, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>&rarr;</motion.span>

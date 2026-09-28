@@ -13,8 +13,8 @@ module.exports = {
           600: '#1a1a3e',
         },
         signal: {
-          DEFAULT: '#e8ff47',   // electric lime — primary accent
-          dim: '#b8cc38',
+          DEFAULT: '#2BFF5A',
+          dim: '#1EBF43',
         },
         ember: {
           DEFAULT: '#ff6b35',   // warm orange — secondary accent

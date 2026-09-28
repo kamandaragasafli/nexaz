@@ -5,8 +5,8 @@ import ScrollReveal from '../ui/ScrollReveal'
 import { useCopy } from '../../i18n/LanguageContext'
 
 const visuals = [
-  { btnClass: 'bg-signal text-ink-950 hover:shadow-[0_0_20px_rgba(232,255,71,0.2)]', borderClass: 'border-white/10' },
-  { btnClass: 'bg-signal text-ink-950 hover:shadow-[0_0_20px_rgba(232,255,71,0.2)]', borderClass: 'border-signal/50', popular: true },
+  { btnClass: 'bg-signal text-ink-950 hover:shadow-[0_0_20px_rgba(43,255,90,0.2)]', borderClass: 'border-white/10' },
+  { btnClass: 'bg-signal text-ink-950 hover:shadow-[0_0_20px_rgba(43,255,90,0.2)]', borderClass: 'border-signal/50', popular: true },
   { btnClass: 'border border-ember text-ember hover:bg-ember hover:text-ink-950', borderClass: 'border-ember/30' },
 ]
 

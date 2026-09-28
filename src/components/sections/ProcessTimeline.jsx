@@ -27,8 +27,8 @@ export default function ProcessTimeline() {
           <motion.div 
             className="w-4 h-4 rounded-full border-2 transition-colors duration-500"
             animate={{ 
-              borderColor: inView ? '#e8ff47' : 'rgba(255,255,255,0.2)',
-              backgroundColor: inView ? '#e8ff47' : '#080812'
+              borderColor: inView ? '#2BFF5A' : 'rgba(255,255,255,0.2)',
+              backgroundColor: inView ? '#2BFF5A' : '#080812'
             }}
           />
           <span className="absolute left-8 font-mono text-xs opacity-0 group-hover:opacity-100 transition-opacity text-mist-900">{copy.scroll}</span>
@@ -79,7 +79,7 @@ export default function ProcessTimeline() {
         {/* The active animated line */}
         <div className="sticky top-0 h-screen w-px left-6 md:left-12 flex-shrink-0 z-0">
           <motion.div 
-            className="absolute top-0 w-[3px] -ml-[1px] bg-gradient-to-b from-signal/10 via-signal to-signal/10 origin-top shadow-[0_0_15px_rgba(232,255,71,0.5)]"
+            className="absolute top-0 w-[3px] -ml-[1px] bg-gradient-to-b from-signal/10 via-signal to-signal/10 origin-top shadow-[0_0_15px_rgba(43,255,90,0.5)]"
             style={{ scaleY, height: "100vh" }}
           />
         </div>
