@@ -2,7 +2,6 @@ export const messages = {
   en: {
     nav: {
       links: [
-        { id: 'work', label: 'Work' },
         { id: 'services', label: 'Services' },
         { id: 'process', label: 'Process' },
         { id: 'contact', label: 'Contact' },
@@ -99,7 +98,7 @@ export const messages = {
         { industry: 'E-commerce', result: '₹2.4Cr / 90 days', desc: 'Shopify rebuild with conversion-first design. Revenue target hit in under 3 months.', services: ['Shopify', 'Growth', 'SEO'] },
       ],
     },
-    stats: ['Projects Delivered', 'Revenue Generated', 'Satisfaction Rate', 'Avg Clutch Rating', 'Years in Business', 'Countries Served'],
+    stats: ['Projects Delivered', 'Satisfaction Rate', 'Avg Clutch Rating'],
     testimonials: [
       { quote: 'NEXAZ transformed our entire digital presence. We went from embarrassed to proud in 12 weeks.' },
       { quote: 'The strategy session alone was worth the entire engagement cost.' },
@@ -147,7 +146,7 @@ export const messages = {
       line2: 'it happen.',
       body: "We're now accepting a limited number of new projects for Q3. Book a discovery call to secure your spot.",
       button: 'Book a Free Call',
-      email: 'Or email us at hello@nexaz.studio',
+      email: 'Or email us at nexaz.tech@gmail.com',
       join: 'Join 48+ companies who chose us.',
     },
     footer: {
@@ -162,7 +161,7 @@ export const messages = {
       map: 'View on Map →',
       rights: 'NEXAZ Studio. All rights reserved.',
       made: 'Designed with',
-      madeIn: 'in Bangalore',
+      madeIn: 'in Baku',
       privacy: 'Privacy Policy',
       terms: 'Terms',
       sitemap: 'Sitemap',
@@ -171,7 +170,6 @@ export const messages = {
   az: {
     nav: {
       links: [
-        { id: 'work', label: 'İşlər' },
         { id: 'services', label: 'Xidmətlər' },
         { id: 'process', label: 'Proses' },
         { id: 'contact', label: 'Əlaqə' },
@@ -268,7 +266,7 @@ export const messages = {
         { industry: 'E-ticarət', result: '₹2.4 kr / 90 gün', desc: 'Çevrilməyə yönəlmiş Shopify yenidənqurması. Gəlir hədəfi 3 aydan az müddətdə tutuldu.', services: ['Shopify', 'İnkişaf', 'SEO'] },
       ],
     },
-    stats: ['Təhvil verilən layihə', 'Yaradılan gəlir', 'Məmnuniyyət', 'Orta Clutch reytinqi', 'Bazarda il', 'Xidmət olunan ölkə'],
+    stats: ['Təhvil verilən layihə', 'Məmnuniyyət', 'Orta Clutch reytinqi'],
     testimonials: [
       { quote: 'NEXAZ bütün rəqəmsal mövcudluğumuzu dəyişdi. 12 həftəyə utancdan qürurə keçdik.' },
       { quote: 'Təkcə strategiya sessiyası bütün əməkdaşlığın dəyərinə dəyərdi.' },
@@ -316,7 +314,7 @@ export const messages = {
       line2: 'reallaşdıraq.',
       body: 'Q3 üçün məhdud sayda yeni layihə qəbul edirik. Yerinizi tutmaq üçün tanışlıq zəngi bron edin.',
       button: 'Pulsuz zəng bron et',
-      email: 'Və ya bizə yazın: hello@nexaz.studio',
+      email: 'Və ya bizə yazın: nexaz.tech@gmail.com',
       join: 'Bizi seçən 48+ şirkətə qoşulun.',
     },
     footer: {
@@ -330,8 +328,8 @@ export const messages = {
       contact: 'Əlaqə',
       map: 'Xəritədə bax →',
       rights: 'NEXAZ Studio. Bütün hüquqlar qorunur.',
-      made: 'Banqalorda',
-      madeIn: 'ilə hazırlanıb',
+      made: 'Bakıda',
+      madeIn: 'hazırlanıb',
       privacy: 'Məxfilik siyasəti',
       terms: 'Şərtlər',
       sitemap: 'Sayt xəritəsi',

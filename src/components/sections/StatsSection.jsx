@@ -6,11 +6,8 @@ export default function StatsSection() {
   const labels = useCopy().stats
   const stats = [
     { num: 48, suffix: '+' },
-    { num: 12, prefix: '$', suffix: 'M' },
     { num: 98, suffix: '%' },
     { num: 4.9, suffix: '★', decimals: 1 },
-    { num: 6 },
-    { num: 3 },
   ]
 
   return (

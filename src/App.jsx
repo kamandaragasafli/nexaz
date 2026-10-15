@@ -11,7 +11,6 @@ import StorySection from './components/sections/StorySection'
 import ServicesGrid from './components/sections/ServicesGrid'
 import OfferSection from './components/sections/OfferSection'
 import ProcessTimeline from './components/sections/ProcessTimeline'
-import CaseStudies from './components/sections/CaseStudies'
 import StatsSection from './components/sections/StatsSection'
 import TestimonialsCarousel from './components/sections/TestimonialsCarousel'
 import TechStack from './components/sections/TechStack'
@@ -37,7 +36,6 @@ export default function App() {
           <ServicesGrid />
           <OfferSection />
           <ProcessTimeline />
-          <CaseStudies />
           <StatsSection />
           <TestimonialsCarousel />
           <TechStack />

@@ -1,4 +1,4 @@
-import { Briefcase as Linkedin, MessageCircle as Twitter, Camera as Instagram, Palette as Dribbble } from 'lucide-react'
+import { Briefcase as Linkedin, MessageCircle as Twitter, Camera as Instagram, Facebook } from 'lucide-react'
 import { useCopy } from '../../i18n/LanguageContext'
 
 export default function Footer() {
@@ -20,10 +20,9 @@ export default function Footer() {
               {t.line1}<br/>{t.line2}
             </p>
             <div className="flex gap-4 text-mist-900">
-              <a href="#" className="hover:text-white transition-colors p-2 -ml-2 rounded-full hover:bg-white/5"><Linkedin size={20} /></a>
+              <a href="https://www.facebook.com/share/19nusrfysc/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors p-2 -ml-2 rounded-full hover:bg-white/5"><Facebook size={20} /></a>
               <a href="#" className="hover:text-white transition-colors p-2 rounded-full hover:bg-white/5"><Twitter size={20} /></a>
-              <a href="#" className="hover:text-white transition-colors p-2 rounded-full hover:bg-white/5"><Instagram size={20} /></a>
-              <a href="#" className="hover:text-white transition-colors p-2 rounded-full hover:bg-white/5"><Dribbble size={20} /></a>
+              <a href="https://www.instagram.com/nexaz.tech/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors p-2 rounded-full hover:bg-white/5"><Instagram size={20} /></a>
             </div>
           </div>
 
@@ -51,11 +50,10 @@ export default function Footer() {
           <div className="col-span-1">
             <h4 className="font-mono text-xs text-signal uppercase tracking-widest mb-6">{t.contact}</h4>
             <div className="flex flex-col gap-4 text-sm text-mist-500">
-              <a href="mailto:hello@nexaz.studio" className="hover:text-white transition-colors" data-cursor="hover">hello@nexaz.studio</a>
-              <a href="tel:+919876543210" className="hover:text-white transition-colors" data-cursor="hover">+91 98765 43210</a>
+              <a href="mailto:nexaz.tech@gmail.com" className="hover:text-white transition-colors" data-cursor="hover">nexaz.tech</a>
+              <a href="tel:+994504768843" className="hover:text-white transition-colors" data-cursor="hover">+994 50 476 88 43</a>
               <p className="mt-4 text-mist-700 leading-relaxed">
-                100ft Road, Indiranagar<br/>
-                Bangalore, India 560038
+                Bakı ş xətai pr 36
               </p>
               <a href="#" className="text-signal hover:underline mt-2 inline-block" data-cursor="hover">{t.map}</a>
             </div>

@@ -74,7 +74,7 @@ export default function CTASection() {
             <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity z-0"></div>
           </MagneticButton>
 
-          <a href="mailto:hello@nexaz.studio" className="font-mono text-sm text-mist-700 hover:text-white transition-colors pb-1 border-b border-white/20 hover:border-white mt-4">
+          <a href="mailto:nexaz.tech@gmail.com" className="font-mono text-sm text-mist-700 hover:text-white transition-colors pb-1 border-b border-white/20 hover:border-white mt-4">
             {t.email}
           </a>
         </motion.div>
