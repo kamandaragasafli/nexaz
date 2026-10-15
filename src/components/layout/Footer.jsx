@@ -1,4 +1,4 @@
-import { Briefcase as Linkedin, MessageCircle as Twitter, Camera as Instagram, Facebook } from 'lucide-react'
+import { Briefcase as Linkedin, MessageCircle as Twitter, Camera as Instagram } from 'lucide-react'
 import { useCopy } from '../../i18n/LanguageContext'
 
 export default function Footer() {
@@ -20,7 +20,7 @@ export default function Footer() {
               {t.line1}<br/>{t.line2}
             </p>
             <div className="flex gap-4 text-mist-900">
-              <a href="https://www.facebook.com/share/19nusrfysc/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors p-2 -ml-2 rounded-full hover:bg-white/5"><Facebook size={20} /></a>
+              <a href="https://www.facebook.com/share/19nusrfysc/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors p-2 -ml-2 rounded-full hover:bg-white/5 text-sm font-mono">FB</a>
               <a href="#" className="hover:text-white transition-colors p-2 rounded-full hover:bg-white/5"><Twitter size={20} /></a>
               <a href="https://www.instagram.com/nexaz.tech/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors p-2 rounded-full hover:bg-white/5"><Instagram size={20} /></a>
             </div>
