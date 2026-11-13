@@ -13,7 +13,6 @@ export const caseStudies = [
   { id: 1, company: 'CorERP', industry: '', result: '', desc: '', services: [], accentColor: 'from-signal/20 to-transparent', image: '/work/vanta-finance.png', panel3d: true },
   { id: 2, company: 'Bloom Health', industry: 'HealthTech', result: '$4M Series A', desc: 'Built the investor-facing brand and product demo that closed their seed round.', services: ['Branding', 'Web', 'Pitch Deck'], accentColor: 'from-green-900/40 to-transparent' },
   { id: 3, company: 'Orbit SaaS', industry: 'B2B SaaS', result: 'NPS 34 → 71', desc: 'Redesigned the core dashboard with AI-assisted insights. Users finally understood their data.', services: ['AI', 'Design', 'React'], accentColor: 'from-signal/10 to-transparent' },
-  { id: 4, company: 'Crest Retail', industry: 'E-commerce', result: '₹2.4Cr / 90 days', desc: 'Shopify rebuild with conversion-first design. Revenue target hit in under 3 months.', services: ['Shopify', 'Growth', 'SEO'], accentColor: 'from-purple-900/40 to-transparent' },
 ]
 
 export const faqs = [

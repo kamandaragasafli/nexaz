@@ -6,7 +6,6 @@ import Navbar from './components/layout/Navbar'
 import WhatsAppButton from './components/layout/WhatsAppButton'
 import Footer from './components/layout/Footer'
 import Hero from './components/sections/Hero'
-import LogoCloud from './components/sections/LogoCloud'
 import StorySection from './components/sections/StorySection'
 import ServicesGrid from './components/sections/ServicesGrid'
 import OfferSection from './components/sections/OfferSection'
@@ -31,7 +30,6 @@ export default function App() {
         
         <main>
           <Hero />
-          <LogoCloud />
           <StorySection />
           <ServicesGrid />
           <OfferSection />
