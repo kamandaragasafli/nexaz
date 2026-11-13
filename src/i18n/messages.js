@@ -13,7 +13,6 @@ export const messages = {
       badge: 'Available for projects in 2025 →',
       line1: ['We', 'build'],
       line2: ['digital', 'futures'],
-      line3: ['that', 'matter.'],
       body: 'We are an award-winning studio pushing the boundaries of strategy, design, and engineering to build digital products people love.',
       work: 'See Our Work',
       how: 'How We Work',
@@ -178,9 +177,8 @@ export const messages = {
     },
     hero: {
       badge: '2025-ci il layihələri üçün açığıq →',
-      line1: ['Sizin', 'rəqəmsal', 'tərəddaşınız'],
+      line1: ['Sizin', 'rəqəmsal', 'tərəfdaşınız'],
       line2: ['rəqəmsal', 'gələcəklər'],
-      line3: ['önəmli', 'olanı.'],
       body: 'Strategiya, dizayn və mühəndisliyin sərhədlərini zorlayan, insanların sevdiyi rəqəmsal məhsullar yaradan mükafatlı studiyayıq.',
       work: 'İşlərimizə bax',
       how: 'Necə işləyirik',
